@@ -1,0 +1,34 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "index.js",
+  "type": "module",
+  "bin": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadullah48/1.git"
+  },
+  "author": "asadullahshafique",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asadullah48/1/issues"
+  },
+  "homepage": "https://github.com/asadullah48/1#readme",
+  "dependencies": {
+    "chalk-animation": "^2.0.3",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^9.2.22",
+    "nanospinner": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/chalk-animation": "^1.6.3",
+    "@types/figlet": "^1.5.8",
+    "@types/gradient-string": "^1.1.6",
+    "@types/inquirer": "^9.0.7"
+  }
+}

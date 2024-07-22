@@ -4,7 +4,7 @@ import gradient from 'gradient-string';
 import chalkAnimation from 'chalk-animation';
 import figlet from 'figlet';
 import { createSpinner } from 'nanospinner';
-let playerId;
+let playerName;
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 async function welcome() {
     const rainbowTitle = chalkAnimation.rainbow('Who Wants To Be A JavaScript Millionaire? \n');
@@ -22,10 +22,10 @@ async function handleAnswer(isCorrect) {
     const spinner = createSpinner('Checking answer...').start();
     await sleep();
     if (isCorrect) {
-        spinner.success({ text: `Nice work ${playerId}. That's a legit answer` });
+        spinner.success({ text: `Nice work ${playerName}. That's a legit answer` });
     }
     else {
-        spinner.error({ text: `💀💀💀 Game over, you lose ${playerId}!` });
+        spinner.error({ text: `💀💀💀 Game over, you lose ${playerName}!` });
         process.exit(1);
     }
 }
@@ -38,11 +38,11 @@ async function askName() {
             return 'Player';
         },
     });
-    playerId = answers.player_name;
+    playerName = answers.player_name;
 }
 function winner() {
     console.clear();
-    figlet(`Congrats , ${playerId} !\n $ 1 , 0 0 0 , 0 0 0`, (err, data) => {
+    figlet(`Congrats , ${playerName} !\n $ 1 , 0 0 0 , 0 0 0`, (err, data) => {
         console.log(gradient.pastel.multiline(data) + '\n');
         console.log(chalk.green(`Programming isn't about what you know; it's about making the command line look cool`));
         process.exit(0);
